@@ -3,7 +3,7 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let user of users"
           (click)="onSelect(user)"
-          [class.active]="user === selectedUser"
+          [class.active]="selectedUser && user.id === selectedUser.id"
       >
         {{user.name}}
       </li>
