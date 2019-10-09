@@ -15,8 +15,8 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
-    limit: '50mb',
-    extended: true
+  limit: '50mb',
+  extended: true
 }));
 app.use(cookieParser(config.secret));
 app.use(express.static(path.join(__dirname, '..', 'assets')));

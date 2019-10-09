@@ -1,9 +1,9 @@
 module.exports = (config, database) => {
-    const express = require('express');
+  const express = require('express');
 
-    const router = express.Router();
+  const router = express.Router();
 
-    router.use('/users', require('./users')(config, database));
+  router.use('/users', require('./users')(config, database));
 
-    return router;
+  return router;
 };

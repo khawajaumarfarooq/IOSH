@@ -1,12 +1,12 @@
 module.exports = (config) => {
-    const baseURI = 'https://jsonplaceholder.typicode.com';
+  const baseURI = 'https://jsonplaceholder.typicode.com';
 
-    const users = require('./users')({
-        ...config,
-        baseURI
-    });
+  const users = require('./users')({
+    ...config,
+    baseURI
+  });
 
-    return {
-        users
-    };
+  return {
+    users
+  };
 };
