@@ -24,11 +24,11 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe(users => this.users = users);
   }
 
-  onSelect(user: User) {
-    if (this.selectedUser === user) {
+  async onSelect(user: User) {
+    if (this.selectedUser && this.selectedUser.id === user.id) {
       this.selectedUser = null;
     } else {
-      this.selectedUser = user;
+      this.selectedUser = await this.userService.getUser(user.id);
     }
   }
 }

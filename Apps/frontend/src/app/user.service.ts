@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { User } from './user';
 import { USERS } from './mock-users';
@@ -8,10 +9,16 @@ import { USERS } from './mock-users';
 })
 export class UserService {
 
-  constructor() { }
+  private usersUrl = 'http://localhost:4199/users';
+
+  constructor(private http: HttpClient) { }
 
   getUsers(): Observable<User[]> {
-    return of(USERS);
+    return this.http.get<User[]>(this.usersUrl);
+  }
+
+  getUser(id: number): Promise<User> {
+    return this.http.get<User>(`${this.usersUrl}/${id}`).toPromise();
   }
 
 }
