@@ -1,0 +1,2 @@
+<agm-map *ngIf="geo" [latitude]="geo.lat" [longitude]="geo.lng" mapTypeId="satellite" [zoom]="1"></agm-map>
+<p *ngIf="geo" style="text-align: center">({{geo.lat}}, {{geo.lng}})</p>

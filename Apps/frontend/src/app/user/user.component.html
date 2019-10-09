@@ -1,0 +1,35 @@
+<p class="lead">
+  <strong><a href="https://{{user.website}}">{{user.name}}</a></strong>
+</p>
+<dl class="row">
+  <dt class="col-sm-3">
+    Username
+  </dt>
+  <dd class="col-sm-9">
+    {{user.username}}
+  </dd>
+  <dt class="col-sm-3">
+    Email
+  </dt>
+  <dd class="col-sm-9">
+    <a href="mailto:{{user.email}}">{{user.email}}</a>
+  </dd>
+  <dt class="col-sm-3">
+    Address
+  </dt>
+  <dd class="col-sm-9">
+    <app-address [address]="user.address"></app-address>
+  </dd>
+  <dt class="col-sm-3">
+    Phone
+  </dt>
+  <dd class="col-sm-9">
+    {{user.phone}}
+  </dd>
+  <dt class="col-sm-3">
+    Company
+  </dt>
+  <dd class="col-sm-9">
+    <app-company [company]="user.company"></app-company>
+  </dd>
+</dl>

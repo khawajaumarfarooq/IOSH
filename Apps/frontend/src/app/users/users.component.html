@@ -11,18 +11,7 @@
   </div>
   <div class="col-sm">
     <div *ngIf="selectedUser">
-      <p class="lead">{{selectedUser.name}}</p>
-      <p><a href="mailto:{{selectedUser.email}}">{{selectedUser.email}}</a></p>
-      <p>{{selectedUser.username}}</p>
-      <p>{{selectedUser.address.street}}</p>
-      <p>{{selectedUser.address.suite}}</p>
-      <p>{{selectedUser.address.city}}</p>
-      <p>{{selectedUser.address.zipcode}}</p>
-      <p>{{selectedUser.phone}}</p>
-      <p>{{selectedUser.website}}</p>
-      <p>{{selectedUser.company.name}}</p>
-      <p>{{selectedUser.company.catchPhrase}}</p>
-      <p>{{selectedUser.company.bs}}</p>
+      <app-user [user]="selectedUser"></app-user>
     </div>
   </div>
 </div>
